@@ -1,38 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\",
+  "WorkspaceRootPath": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Exepciones.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:Exepciones.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\determinantes.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:determinantes.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Resolv.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:Resolv.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Resolv.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:Resolv.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Matrices.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:Matrices.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Matrices.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:Matrices.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\determinantes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\determinantes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:determinantes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\determinantes.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:determinantes.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Exepciones.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:Exepciones.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Resolv.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:Resolv.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Resolv.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:Resolv.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Matrices.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:Matrices.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Matrices.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:Matrices.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Exepciones.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E45A61B4-E2D5-4E66-9A10-29717F323556}|Tarea 6.vcxproj|solutionrelative:Exepciones.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,107 +49,117 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Matrices.cpp",
+              "DocumentMoniker": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Matrices.cpp",
+              "RelativeDocumentMoniker": "Matrices.cpp",
+              "ToolTip": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Matrices.cpp",
+              "RelativeToolTip": "Matrices.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-18T00:36:32.408Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Exepciones.cpp",
+              "DocumentMoniker": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Exepciones.cpp",
+              "RelativeDocumentMoniker": "Exepciones.cpp",
+              "ToolTip": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Exepciones.cpp",
+              "RelativeToolTip": "Exepciones.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-16T18:08:15.398Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Main.cpp",
-              "DocumentMoniker": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Main.cpp",
+              "DocumentMoniker": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Main.cpp",
               "RelativeDocumentMoniker": "Main.cpp",
-              "ToolTip": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Main.cpp",
+              "ToolTip": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Main.cpp",
               "RelativeToolTip": "Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAACsAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-10-03T13:21:02.95Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Resolv.h",
-              "DocumentMoniker": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Resolv.h",
+              "DocumentMoniker": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Resolv.h",
               "RelativeDocumentMoniker": "Resolv.h",
-              "ToolTip": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Resolv.h",
+              "ToolTip": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Resolv.h",
               "RelativeToolTip": "Resolv.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-03T12:33:32.889Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Resolv.cpp",
-              "DocumentMoniker": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Resolv.cpp",
-              "RelativeDocumentMoniker": "Resolv.cpp",
-              "ToolTip": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Resolv.cpp",
-              "RelativeToolTip": "Resolv.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-03T12:32:54.713Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "determinantes.h",
-              "DocumentMoniker": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\determinantes.h",
-              "RelativeDocumentMoniker": "determinantes.h",
-              "ToolTip": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\determinantes.h",
-              "RelativeToolTip": "determinantes.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-03T12:30:58.136Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "determinantes.cpp",
-              "DocumentMoniker": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\determinantes.cpp",
-              "RelativeDocumentMoniker": "determinantes.cpp",
-              "ToolTip": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\determinantes.cpp",
-              "RelativeToolTip": "determinantes.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-03T12:30:09.931Z"
+              "WhenOpened": "2025-10-03T12:33:32.889Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Matrices.h",
-              "DocumentMoniker": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Matrices.h",
-              "RelativeDocumentMoniker": "Matrices.h",
-              "ToolTip": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Matrices.h",
-              "RelativeToolTip": "Matrices.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-03T12:29:07.38Z"
+              "Title": "Resolv.cpp",
+              "DocumentMoniker": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Resolv.cpp",
+              "RelativeDocumentMoniker": "Resolv.cpp",
+              "ToolTip": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Resolv.cpp",
+              "RelativeToolTip": "Resolv.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-03T12:32:54.713Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Matrices.cpp",
-              "DocumentMoniker": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Matrices.cpp",
-              "RelativeDocumentMoniker": "Matrices.cpp",
-              "ToolTip": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Matrices.cpp",
-              "RelativeToolTip": "Matrices.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-03T12:28:16.112Z"
+              "DocumentIndex": 2,
+              "Title": "determinantes.h",
+              "DocumentMoniker": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\determinantes.h",
+              "RelativeDocumentMoniker": "determinantes.h",
+              "ToolTip": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\determinantes.h",
+              "RelativeToolTip": "determinantes.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-03T12:30:58.136Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "determinantes.cpp",
+              "DocumentMoniker": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\determinantes.cpp",
+              "RelativeDocumentMoniker": "determinantes.cpp",
+              "ToolTip": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\determinantes.cpp",
+              "RelativeToolTip": "determinantes.cpp",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-03T12:30:09.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Matrices.h",
+              "DocumentMoniker": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Matrices.h",
+              "RelativeDocumentMoniker": "Matrices.h",
+              "ToolTip": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Matrices.h",
+              "RelativeToolTip": "Matrices.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-03T12:29:07.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Exepciones.h",
-              "DocumentMoniker": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Exepciones.h",
+              "DocumentMoniker": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Exepciones.h",
               "RelativeDocumentMoniker": "Exepciones.h",
-              "ToolTip": "D:\\UsuarioFelipe\\Documentos\\Visual Studio 2022\\Abril-Teo\\Sist_Ecuaciones\\Tarea 6\\Exepciones.h",
+              "ToolTip": "C:\\prog2\\Sist_Ecuaciones\\Tarea 6\\Exepciones.h",
               "RelativeToolTip": "Exepciones.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-10-03T12:27:20.068Z",
               "EditorCaption": ""

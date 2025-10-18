@@ -5,10 +5,15 @@
 int matrix::rows(const Matrix& A) {
     return static_cast<int>(A.size());
 }
+
 // cantidad de columnas
 int matrix::cols(const Matrix& A) {
-    return A.empty() ? 0 : static_cast<int>(A[0].size());
+    if (A.empty()) {
+        return 0;}
+    else { 
+        return static_cast<int>(A[0].size());}
 }
+
 // imprime en consola
 void matrix::print(const Matrix& A) {
     std::cout << std::fixed << std::setprecision(2);
