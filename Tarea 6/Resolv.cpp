@@ -1,81 +1,67 @@
-#include<vector>
-#include<iostream>
-#include<string>
-#include<cmath>
-#include"Resolv.h"
-#include"Matrices.h"
+#include <iostream>
+#include <vector>
 #include <stdexcept>
+#include <cmath>
+#include <algorithm>
+#include "Resolv.h"
+#include "Matrices.h"
 
-std::vector<double> resolverPorGaussJordan(Matrix aumentada) {
+using namespace std;
+
+vector<double> resolverPorGaussJordan(Matrix aumentada) {
     int filas = matrix::rows(aumentada);
     if (filas == 0) return {};
-    int columnas = matrix::cols(aumentada);
+    int incognitas = matrix::cols(aumentada) - 1;
 
-    // --- Inicio del algoritmo ---
-    // El objetivo es convertir la parte izquierda de la matriz en una matriz identidad.
+    int pivot_row = 0;
+    // El bucle avanza por columnas (no por filas), es más robusto
+    for (int j = 0; j < incognitas && pivot_row < filas; ++j) {
 
-    for (int i = 0; i < filas; ++i) {
-        // 1. Pivoteo: Asegurarse de que el elemento A[i][i] no sea cero.
-        // (Por ahora podemos omitir el pivoteo complejo para simplificar).
-        double pivote = aumentada[i][i];
-        if (pivote == 0) {
-            // En un caso real, buscaríamos otra fila para intercambiar.
-            // Por ahora, lanzamos un error o asumimos que no pasará.
-            throw std::runtime_error("Se encontró un cero en la diagonal principal. El método simple falla.");
+        // Pivoteo parcial: Busca la mejor fila para pivotear (la que tenga el número más grande)
+        int i_max = pivot_row;
+        for (int k = pivot_row + 1; k < filas; ++k) {
+            if (abs(aumentada[k][j]) > abs(aumentada[i_max][j])) {
+                i_max = k;
+            }
+        }
+        swap(aumentada[pivot_row], aumentada[i_max]);
+
+        double pivote = aumentada[pivot_row][j];
+        if (abs(pivote) < 1e-9) { // Si el pivote es prácticamente cero
+            continue; // No se puede pivotar en esta columna, la saltea y sigue.
         }
 
-        // 2. Normalizar la fila del pivote: Hacer que el elemento A[i][i] sea 1.
-        // Para ello, dividimos toda la fila por el valor del pivote.
-        for (int j = i; j < columnas; ++j) {
-            aumentada[i][j] /= pivote;
+        // Normaliza la fila del pivote para que el pivote sea 1.
+        for (int k = j; k < incognitas + 1; ++k) {
+            aumentada[pivot_row][k] /= pivote;
         }
 
-        // 3. Eliminación: Hacer cero los otros elementos de la columna del pivote.
-        for (int k = 0; k < filas; ++k) {
-            if (k != i) { // No queremos modificar la fila del pivote misma
-                double factor = aumentada[k][i];
-                for (int j = i; j < columnas; ++j) {
-                    aumentada[k][j] -= factor * aumentada[i][j];
+        // Eliminación: Hace cero los otros elementos de la columna del pivote.
+        for (int i = 0; i < filas; ++i) {
+            if (i != pivot_row) {
+                double factor = aumentada[i][j];
+                for (int k = j; k < incognitas + 1; ++k) {
+                    aumentada[i][k] -= factor * aumentada[pivot_row][k];
                 }
             }
         }
-        std::cout << "\nPaso intermedio:\n";
+        cout << "\nPaso intermedio tras pivote en columna " << j + 1 << ":\n";
         matrix::print(aumentada);
+        pivot_row++;
     }
 
-    // --- Fin del algoritmo ---
-
-    // 4. Extraer la solución: La solución está en la última columna.
-    std::vector<double> solucion;
-    for (int i = 0; i < filas; ++i) {
-        solucion.push_back(aumentada[i][columnas - 1]);
+    // ========== EXTRACCIÓN DE SOLUCIÓN  ==========
+    vector<double> solucion(incognitas, 0); // Crea el vector de soluciones del tamaño correcto (N° de incógnitas)
+    for (int i = 0; i < min(filas, incognitas); ++i) {
+        solucion[i] = aumentada[i][incognitas];
     }
+
+    // Verifica si el sistema es inconsistente
+    for (int i = pivot_row; i < filas; i++) {
+        if (abs(aumentada[i][incognitas]) > 1e-9) { // 1e-9 es un número muy chico, cercano a cero
+            throw runtime_error("El sistema es inconsistente y no tiene solucion.");
+        }
+    }
+
     return solucion;
-}
-
-void elementos(const Matrix& A){
-	int m = matrix::rows(A);
-	int n = matrix::cols(A);
-	for (int i = 0; i < m; i++) {
-		for (int j = 0; j < n; j++) {
-			double valor = A[i][j];
-			//validar que sea integer
-			if (!std::isfinite(valor) || std::floor(valor) != valor) {
-				throw InputError(
-					"Elemento inválido o no entero en la posición (" +
-					std::to_string(i + 1) + "," + std::to_string(j + 1) + ")"
-				);
-			}
-		}
-	}
-}
-void filanula(const Matrix& A) {
-
-
-
-}
-void filacontr(const Matrix& A) {
-
-
-
 }

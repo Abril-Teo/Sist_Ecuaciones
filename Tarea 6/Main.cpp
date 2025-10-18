@@ -1,67 +1,57 @@
-// main.cpp
 #include <iostream>
 #include <vector>
 #include "Matrices.h"
-#include "Exepciones.h" // Asegúrate que el nombre del archivo coincida
+#include "Exepciones.h"
 #include "Resolv.h"
 #include "determinantes.h"
+#include "EntradaSalida.h"
+
+using namespace std;
 
 int main() {
     try {
         int ecuaciones, incognitas;
+		//============= ARMAR MATRIZ CON CANTIDAD DE ECUACIONES E INCÓGNITAS Y SUS VALORES =============
+        cout << "--- Calculadora de Sistemas de Ecuaciones Lineales ---\n";
+        cout << "Ingrese el numero de ecuaciones: ";
+        cin >> ecuaciones;
 
-        std::cout << "--- Calculadora de Sistemas de Ecuaciones Lineales ---\n";
-        std::cout << "Ingrese el numero de ecuaciones: ";
-        std::cin >> ecuaciones;
-
-        std::cout << "Ingrese el numero de incognitas: ";
-        std::cin >> incognitas;
+        cout << "Ingrese el numero de incognitas: ";
+        cin >> incognitas;
 
         if (ecuaciones <= 0 || incognitas <= 0) {
             throw DimensionError("El numero de ecuaciones e incognitas debe ser mayor que cero.");
         }
 
-        // Para resolver por Gauss-Jordan, creamos la matriz aumentada [A|b]
-        // Tendrá 'ecuaciones' filas y 'incognitas + 1' columnas.
         Matrix aumentada = matrix::create(ecuaciones, incognitas + 1);
 
-        std::cout << "\nIngrese los coeficientes de la matriz y los terminos independientes:\n";
+        cout << "\nIngrese los coeficientes de la matriz y los terminos independientes:\n";
         for (int i = 0; i < ecuaciones; ++i) {
-            std::cout << "Ecuacion " << i + 1 << ":\n";
-            // Pedimos los coeficientes de las incógnitas
+            cout << "Ecuacion " << i + 1 << ":\n";
             for (int j = 0; j < incognitas; ++j) {
-                std::cout << "  Coeficiente de x" << j + 1 << ": ";
-                std::cin >> aumentada[i][j];
+                cout << "  Coeficiente de x" << j + 1 << ": ";
+                cin >> aumentada[i][j];
             }
-            // Pedimos el término independiente
-            std::cout << "  Termino independiente: ";
-            std::cin >> aumentada[i][incognitas]; // Se guarda en la última columna
+            cout << "  Termino independiente: ";
+            cin >> aumentada[i][incognitas];
         }
 
-        std::cout << "\nMatriz aumentada [A|b] ingresada:\n";
+        cout << "\nMatriz aumentada [A|b] ingresada:\n";
         matrix::print(aumentada);
-
-        // --- Aquí irá la lógica para resolver el sistema ---
-        // 1. Analizar la matriz (si es cuadrada, etc.).
-        // 2. Seleccionar y llamar al método de resolución (Gauss, Sarrus, etc.).
-        // 3. Imprimir el resultado.
-
-        // En main.cpp, después de imprimir la matriz aumentada...
-
-// --- Lógica de Selección de Método ---
-        ecuaciones = matrix::rows(aumentada);
-        incognitas = matrix::cols(aumentada) - 1;
-
+        //============= ELIGE METODO DE RESOLUCION, SOLUCIONA Y GUARDA EN ARCHIVO =============
         if (ecuaciones != incognitas) {
-            std::cout << "\nEl sistema no es cuadrado. Intentando resolver por Gauss-Jordan...\n";
-            // Aquí podrías añadir lógica para sistemas no cuadrados si quieres.
-            // Por ahora, lo dejamos para más adelante o lo resolvemos directamente.
-            std::vector<double> solucion = resolverPorGaussJordan(aumentada);
-            // ... (imprimir solución)
+            cout << "\nEl sistema no es cuadrado. Resolviendo por Gauss-Jordan...\n";
+            vector<double> solucion = resolverPorGaussJordan(aumentada);
+
+            cout << "\n--- Solucion ---\n";
+            for (int i = 0; i < solucion.size(); ++i) {
+                cout << "x" << i + 1 << " = " << solucion[i] << endl;
+            }
+            guardarSolucionEnArchivo(aumentada, solucion);
+
         }
         else {
-            // El sistema es cuadrado. ¡Podemos calcular el determinante!
-            std::cout << "\nEl sistema es cuadrado. Calculando determinante...\n";
+            cout << "\nEl sistema es cuadrado. Calculando determinante...\n";
 
             Matrix coeficientes = matrix::create(ecuaciones, incognitas);
             for (int i = 0; i < ecuaciones; ++i) {
@@ -71,38 +61,40 @@ int main() {
             }
 
             double det = 0;
-            if (ecuaciones == 3) {
-                std::cout << "Usando Regla de Sarrus para matriz 3x3.\n";
+  
+            if (ecuaciones == 2) {
+                cout << "Usando formula estandar para matriz 2x2.\n";
+                det = (coeficientes[0][0] * coeficientes[1][1]) - (coeficientes[0][1] * coeficientes[1][0]);
+            }
+            else if (ecuaciones == 3) {
+                cout << "Usando Regla de Sarrus para matriz 3x3.\n";
                 det = determinanteSarrus(coeficientes);
             }
             else {
-                std::cout << "Usando Expansion de Laplace.\n";
+                cout << "Usando Expansion de Laplace.\n";
                 det = determinanteLaplace(coeficientes);
             }
 
-            std::cout << "El determinante de la matriz de coeficientes es: " << det << std::endl;
+            cout << "El determinante de la matriz de coeficientes es: " << det << endl;
 
-            // Comprobación CRÍTICA
-            if (det == 0) {
-                throw SingularMatrix("El determinante es cero. El sistema no tiene solucion unica.");
+            if (abs(det) < 1e-9) { // Comparamos con un número chico en vez de con 0 exacto
+                throw SingularMatrix("El determinante es cero (o muy cercano). El sistema no tiene solucion unica.");
             }
             else {
-                std::cout << "\nEl determinante es distinto de cero. Resolviendo por Gauss-Jordan...\n";
-                std::vector<double> solucion = resolverPorGaussJordan(aumentada);
+                cout << "\nEl determinante es distinto de cero. Resolviendo por Gauss-Jordan...\n";
+                vector<double> solucion = resolverPorGaussJordan(aumentada);
 
-                std::cout << "\n--- Solucion ---\n";
+                cout << "\n--- Solucion ---\n";
                 for (int i = 0; i < solucion.size(); ++i) {
-                    std::cout << "x" << i + 1 << " = " << solucion[i] << std::endl;
+                    cout << "x" << i + 1 << " = " << solucion[i] << endl;
                 }
+                guardarSolucionEnArchivo(aumentada, solucion);
             }
         }
-
-
     }
-    catch (const std::exception& e) {
-        // Capturamos cualquier error (nuestros errores personalizados o errores estándar)
-        std::cerr << "\nERROR: " << e.what() << std::endl;
-        return 1; // Termina el programa con un código de error
+    catch (const exception& e) {
+        cerr << "\nERROR: " << e.what() << endl;
+        return 1;
     }
 
     return 0;

@@ -123,13 +123,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Exepciones.cpp" />
+    <ClCompile Include="EntradaSalida.cpp" />
     <ClCompile Include="Matrices.cpp" />
     <ClCompile Include="determinantes.cpp" />
     <ClCompile Include="Resolv.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EntradaSalida.h" />
     <ClInclude Include="Exepciones.h" />
     <ClInclude Include="determinantes.h" />
     <ClInclude Include="Resolv.h" />

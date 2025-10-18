@@ -1,6 +1,7 @@
-#include "matrices.h"
+#include "Matrices.h"
 #include <iostream>
 #include <iomanip>
+
 // cantidad de filas
 int matrix::rows(const Matrix& A) {
     return static_cast<int>(A.size());
@@ -9,9 +10,10 @@ int matrix::rows(const Matrix& A) {
 // cantidad de columnas
 int matrix::cols(const Matrix& A) {
     if (A.empty()) {
-        return 0;}
-    else { 
-        return static_cast<int>(A[0].size());}
+        return 0;
+    } else {
+        return static_cast<int>(A[0].size());
+    }
 }
 
 // imprime en consola
@@ -24,6 +26,7 @@ void matrix::print(const Matrix& A) {
         std::cout << "\n";
     }
 }
+
 // crear matriz
 Matrix matrix::create(int filas, int columnas, double valorInicial) {
     return Matrix(filas, std::vector<double>(columnas, valorInicial));

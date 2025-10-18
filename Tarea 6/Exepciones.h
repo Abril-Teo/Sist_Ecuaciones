@@ -1,18 +1,21 @@
 #pragma once
 #include <stdexcept>
-// Error de entrada inválida (cuando el usuario pone un número no válido)
-struct InputError : public std::runtime_error {
-    using std::runtime_error::runtime_error;
+#include <string>
+
+// Errores de dimensión (matrices no válidas para la operación)
+class DimensionError : public std::runtime_error {
+  public:
+    explicit DimensionError(const std::string &msg) : std::runtime_error(msg) {}
 };
-// Error de dimensiones de matriz (ej: filas/columnas <= 0 o inconsistencia)
-struct DimensionError : public std::logic_error {
-    using std::logic_error::logic_error;
+
+// Matriz singular (determinante cero)
+class SingularMatrix : public std::runtime_error {
+  public:
+    explicit SingularMatrix(const std::string &msg) : std::runtime_error(msg) {}
 };
-// Error de matriz singular (ej: determinante 0 donde se esperaba inversa)
-struct SingularMatrix : public std::runtime_error {
-    using std::runtime_error::runtime_error;
-};
-// Error de archivo (ej: no se pudo abrir o guardar)
-struct FileError : public std::runtime_error {
-    using std::runtime_error::runtime_error;
+
+// Error al abrir/crear archivos
+class FileError : public std::runtime_error {
+  public:
+    explicit FileError(const std::string &msg) : std::runtime_error(msg) {}
 };
