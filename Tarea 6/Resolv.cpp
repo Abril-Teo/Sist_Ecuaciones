@@ -8,19 +8,19 @@
 
 using namespace std;
 
-vector<double> resolverPorGaussJordan(Matrix aumentada) {
+Matrix resolverPorGaussJordan(Matrix aumentada) {
     int filas = matrix::rows(aumentada);
     if (filas == 0) return {};
     int incognitas = matrix::cols(aumentada) - 1;
 
     int pivot_row = 0;
     // El bucle avanza por columnas (no por filas), es más robusto
-    for (int j = 0; j < incognitas && pivot_row < filas; ++j) { // ????????????????
+    for (int j = 0; j < incognitas && pivot_row < filas; ++j) { 
 
         // Pivoteo parcial: Busca la mejor fila para pivotear (la que tenga el número más grande)
         int i_max = pivot_row;
         for (int k = pivot_row + 1; k < filas; ++k) {
-            if (abs(aumentada[k][j]) > abs(aumentada[i_max][j])) { // ????????????????
+            if (abs(aumentada[k][j]) > abs(aumentada[i_max][j])) {
                 i_max = k;
             }
         }
@@ -51,7 +51,7 @@ vector<double> resolverPorGaussJordan(Matrix aumentada) {
     }
 
     // ========== EXTRACCIÓN DE SOLUCIÓN  ==========
-    vector<double> solucion(incognitas, 0);
+    /*vector<double> solucion(incognitas, 0);
 
     for (int j = 0; j < incognitas; ++j) {
         // Encontrar la fila donde la columna j tiene un 1 (pivote)
@@ -66,7 +66,7 @@ vector<double> resolverPorGaussJordan(Matrix aumentada) {
             solucion[j] = aumentada[fila_pivote][incognitas];
         }
     }
-
+    */
     // Verifica si el sistema es inconsistente
     for (int i = pivot_row; i < filas; i++) {
         if (abs(aumentada[i][incognitas]) > 1e-9) { // 1e-9 es un número muy chico, cercano a cero
@@ -74,5 +74,5 @@ vector<double> resolverPorGaussJordan(Matrix aumentada) {
         }
     }
 
-    return solucion;
+    return aumentada;
 }

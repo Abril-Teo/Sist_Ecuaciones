@@ -8,11 +8,9 @@ Matrix crearSubmatriz(const Matrix& A, int fila_a_quitar, int col_a_quitar) {
     int sub_i = 0;
     for (int i = 0; i < orden; ++i) {
         if (i == fila_a_quitar) continue; // Salta la fila correcta
-
         int sub_j = 0;
         for (int j = 0; j < orden; ++j) {
             if (j == col_a_quitar) continue; // Salta la columna correcta
-
             submatriz[sub_i][sub_j] = A[i][j];
             sub_j++;
         }
@@ -23,6 +21,7 @@ Matrix crearSubmatriz(const Matrix& A, int fila_a_quitar, int col_a_quitar) {
 
 double determinanteLaplace(const Matrix& A) {
     int n = matrix::rows(A);
+
     if (n == 0 || n != matrix::cols(A)) {
         throw DimensionError("El determinante solo se puede calcular para matrices cuadradas.");
     }

@@ -2,13 +2,14 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
+#include <algorithm>
 #include "EntradaSalida.h"
 #include "Exepciones.h"
 #include "Matrices.h"
 
 using namespace std;
 
-void guardarSolucionEnArchivo(const Matrix& matrizInicial, const vector<double>& solucion) {
+void guardarSolucionEnArchivo(const Matrix& matrizInicial, const Matrix& solucion) {
     ofstream archivo("resultado.txt", ios::app); 
     if (!archivo.is_open()) {
         throw FileError("No se pudo abrir o crear el archivo 'resultado.txt'.");
@@ -29,12 +30,49 @@ void guardarSolucionEnArchivo(const Matrix& matrizInicial, const vector<double>&
     }
 
     archivo << "\nResultado:\n";
-    for (int i = 0; i < solucion.size(); ++i) {
-        archivo << "x" << i + 1 << " = " << solucion[i] << "\n";
+
+    // Mostrar toda la matriz 'solucion' con numeración secuencial x1, x2, ...
+    int filas = matrix::rows(solucion);
+    int cols = matrix::cols(solucion);
+    int contador = 1;
+    for (int r = 0; r < filas; ++r) {
+        for (int c = 0; c < cols; ++c) {
+            archivo << "x" << contador << " = " << solucion[r][c] << "\n";
+            ++contador;
+        }
     }
 
     archivo << "---------------\n\n";
 
     archivo.close();
     cout << "\nResultado anadido exitosamente en 'resultado.txt'" << endl;
+}
+
+void ordenarSalida(const Matrix& solucion) {
+    int filas = matrix::rows(solucion);
+    int cols = matrix::cols(solucion);
+    if (filas != cols) {
+        throw DimensionError("ordenarSalida: la matriz debe ser cuadrada.");
+    }
+    int incognitas = filas;
+    //crear un array para almacenar los pares (indice, valor)
+    vector<pair<int, double>> pares;
+    pares.reserve(incognitas);
+    // Usamos la diagonal como valor de la "solución" (según tu requisito)
+    for (int i = 0; i < incognitas; ++i) {
+        pares.push_back({ i + 1, solucion[i][i] });
+    }
+    //ordenar el array de pares por valor
+    for (int i = 0; i < incognitas - 1; ++i) {
+        for (int j = i + 1; j < incognitas; ++j) {
+            if (pares[i].second > pares[j].second) {
+                swap(pares[i], pares[j]);
+            }
+        }
+    }
+    //imprimir los valores en orden
+    cout << "\nSolucion ordenada de menor a mayor:\n";
+    for (int i = 0; i < incognitas; ++i) {
+        cout << "x" << pares[i].first << " = " << pares[i].second << "\n";
+    }
 }
