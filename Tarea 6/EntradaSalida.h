@@ -7,3 +7,5 @@
 void guardarSolucionEnArchivo(const Matrix& matrizInicial, const Matrix& solucion);
 
 void ordenarSalida(const Matrix& solucion);
+
+void mostrarSolucionDeArchivo();

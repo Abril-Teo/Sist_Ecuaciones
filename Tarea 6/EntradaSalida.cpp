@@ -75,3 +75,16 @@ void ordenarSalida(const Matrix& solucion) {
         cout << "x" << pares[i].first << " = " << pares[i].second << "\n";
     }
 }
+
+void mostrarSolucionDeArchivo() {
+    ifstream archivo("resultado.txt");
+    if (!archivo.is_open()) {
+        throw FileError("No se pudo abrir el archivo 'resultado.txt'.");
+    }
+    string linea;
+    cout << "\nContenido de 'resultado.txt':\n\n";
+    while (getline(archivo, linea)) {
+        cout << linea << "\n";
+    }
+	archivo.close();
+}

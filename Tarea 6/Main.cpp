@@ -87,7 +87,7 @@ void resolvermatriz() {
 int main() {
 	int opcion = -1;
 	do {
-		std::cout << "--------Clculadora de matrices--------" << endl;
+		std::cout << "--------Calculadora de matrices--------" << endl;
 		std::cout << " 1) Crea una nueva Matriz " << endl;
 		std::cout << " 2) Ver matrices previamente cargadas" << endl;
 		std::cout << " 0)salir " << endl;
@@ -97,7 +97,7 @@ int main() {
 			resolvermatriz();
 			break;
 		case 2:
-			std::cout << "[Ver matrices previamente cargadas]\n";
+			mostrarSolucionDeArchivo();
 			break;
 		case 0:
 			std::cout << "Saliendo...\n";
