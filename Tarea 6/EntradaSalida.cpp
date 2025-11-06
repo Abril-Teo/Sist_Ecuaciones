@@ -14,7 +14,7 @@ void guardarSolucionEnArchivo(const Matrix& matrizInicial, const Matrix& solucio
     if (!archivo.is_open()) {
         throw FileError("No se pudo abrir o crear el archivo 'resultado.txt'.");
     }
-    archivo << "--- Solucion ---\n";
+    archivo << "============ Solucion =============\n";
     archivo << "Ecuacion Inicial (Matriz Aumentada):\n";
 
     // Damos un formato prolijo a los números dentro del archivo
@@ -34,15 +34,14 @@ void guardarSolucionEnArchivo(const Matrix& matrizInicial, const Matrix& solucio
     // Mostrar toda la matriz 'solucion' con numeración secuencial x1, x2, ...
     int filas = matrix::rows(solucion);
     int cols = matrix::cols(solucion);
-    int contador = 1;
     for (int r = 0; r < filas; ++r) {
         for (int c = 0; c < cols; ++c) {
-            archivo << "x" << contador << " = " << solucion[r][c] << "\n";
-            ++contador;
+            archivo << setw(8) << solucion[r][c] << " ";
         }
+        archivo << "\n";
     }
 
-    archivo << "---------------\n\n";
+    archivo << "==================================\n\n";
 
     archivo.close();
     cout << "\nResultado anadido exitosamente en 'resultado.txt'" << endl;
@@ -50,7 +49,7 @@ void guardarSolucionEnArchivo(const Matrix& matrizInicial, const Matrix& solucio
 
 void ordenarSalida(const Matrix& solucion) {
     int filas = matrix::rows(solucion);
-    int cols = matrix::cols(solucion);
+    int cols = matrix::cols(solucion)-1;
     if (filas != cols) {
         throw DimensionError("ordenarSalida: la matriz debe ser cuadrada.");
     }
@@ -60,7 +59,7 @@ void ordenarSalida(const Matrix& solucion) {
     pares.reserve(incognitas);
     // Usamos la diagonal como valor de la "solución" (según tu requisito)
     for (int i = 0; i < incognitas; ++i) {
-        pares.push_back({ i + 1, solucion[i][i] });
+        pares.push_back({ i + 1, solucion[i][cols] });
     }
     //ordenar el array de pares por valor
     for (int i = 0; i < incognitas - 1; ++i) {

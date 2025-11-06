@@ -36,12 +36,9 @@ void resolvermatriz() {
 		if (ecuaciones != incognitas) {
 			cout << "\nEl sistema no es cuadrado. Resolviendo por Gauss-Jordan...\n";
 			Matrix solucion = resolverPorGaussJordan(aumentada);
-			/*
-			cout << "\n--- Solucion ---\n";
-			for (int i = 0; i < solucion.size(); ++i) {
-				cout << "x" << i + 1 << " = " << solucion[i] << endl;
-			}*/
-			ordenarSalida(solucion);
+			cout << "\n ============ Solucion encontrada: ============ \n";
+			matrix::print(solucion);
+			cout << "\n ============================================== \n";
 			guardarSolucionEnArchivo(aumentada, solucion);
 		}
 		// Ecuacion cuadrada ==> Calcula determinante
@@ -76,11 +73,6 @@ void resolvermatriz() {
 			else {
 				cout << "\nEl determinante es distinto de cero. Resolviendo por Gauss-Jordan...\n";
 				Matrix solucion = resolverPorGaussJordan(aumentada);
-				/*
-				cout << "\n--- Solucion ---\n";
-				for (int i = 0; i < solucion.size(); ++i) {
-					cout << "x" << i + 1 << " = " << solucion[i] << endl;
-				}*/
 				ordenarSalida(solucion);
 				guardarSolucionEnArchivo(aumentada, solucion);
 			}
